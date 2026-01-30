@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title> واي فاي تسجيل دخول -معتز نت</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Tahoma, Arial, sans-serif;
+            background: linear-gradient(135deg, #2b1055, #6a1b9a);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background: #fff;
+            width: 360px;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+            text-align: center;
+        }
+
+        .logo {
+            margin-bottom: 15px;
+        }
+
+        .logo h1 {
+            margin: 0;
+            color: #6a1b9a;
+            font-size: 32px;
+        }
+
+        .logo span {
+            color: #00a8a8;
+            font-weight: bold;
+        }
+        .time {
+            background: #6a1b9a;
+            color: #fff;
+            padding: 8px;
+            border-radius: 10px;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 12px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            background: #6a1b9a;
+            color: #fff;
+            border: none;
+            border-radius: 14px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #4a148c;
+        }
+
+        .support {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div class="time">
+        الساعة الآن: <span id="clock"></span>
+    </div>
+
+    <div class="logo">
+        <h1>معتز <span>نت</span></h1>
+        <p>Internet Services</p>
+    </div>
+
+    <input type="text" placeholder="اسم المستخدم">
+    <input type="password" placeholder="كلمة المرور">
+
+    <button>تسجيل دخول</button>
+
+    <div class="support">
+ للتواصل مع الدعم الفني 0567081220 جوال معتز
+    </div>
+</div>
+
+<script>
+    function updateClock() {
+        const now = new Date();
+        document.getElementById("clock").innerText =
+            now.toLocaleTimeString('ar-EG');
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+
+</body>
+      </html>
